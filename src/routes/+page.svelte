@@ -4,8 +4,8 @@
 </script>
 
 <svelte:head>
-    <title>Vladislav Orlov - orlvt.com</title>
-    <meta property="og:title" content="Vladislav Orlov - orlvt.com" />
+    <title>Vladislav Orlov - w7it.com</title>
+    <meta property="og:title" content="Vladislav Orlov - w7it.com" />
 </svelte:head>
 
 <div class="p-home l-container">

@@ -7,8 +7,8 @@
 </script>
 
 <svelte:head>
-    <title>{status} - Vladislav Orlov - orlvt.com</title>
-    <meta property="og:title" content="{status} - Vladislav Orlov - orlvt.com" />
+    <title>{status} - Vladislav Orlov - w7it.com</title>
+    <meta property="og:title" content="{status} - Vladislav Orlov - w7it.com" />
 </svelte:head>
 
 <PageHeader />
