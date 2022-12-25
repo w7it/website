@@ -1,66 +1,65 @@
 <script lang="ts">
-    import socialLinks from '$lib/social-links.json';
-    import photo from './main-photo.jpg';
+    import Button from '$lib/components/Button.svelte';
+    import PageHeader from '$lib/components/PageHeader.svelte';
+    import heroImage from './heroimg.png';
+    import heroImage2x from './heroimg@2x.png';
 </script>
 
 <svelte:head>
-    <title>Vladislav Orlov - w7it.com</title>
-    <meta property="og:title" content="Vladislav Orlov - w7it.com" />
+    <title>W7 IT Software Company</title>
+    <meta property="og:title" content="W7 IT Software Company" />
 </svelte:head>
 
-<div class="p-home l-container">
-    <h1 class="p-home__title">Vladislav Orlov</h1>
+<PageHeader />
 
-    <nav class="p-home__nav">
-        {#each socialLinks as link, index}
-            {#if index !== 0}{' ‧ '}{/if}
-            <a href={link.link} target="_blank" rel="noreferrer">{link.name}</a>
-        {/each}
-    </nav>
+<main class="intro">
+    <img
+        class="heroimg"
+        src={heroImage}
+        srcset="{heroImage}, {heroImage2x} 2x"
+        alt="Fun art: Developers"
+    />
 
-    <main class="p-home__intro b-post">
-        <img class="p-home__photo" src={photo} alt="Vladislav Orlov" />
+    <div class="herotxt">
+        <h1>Hire R&D team<br />for your product</h1>
 
-        <div>
-            <p>Hi! 👋 I'm digital-nomad & JS/TS developer</p>
-            <p>This site will be filled soon</p>
-        </div>
-    </main>
-</div>
+        <p>Don't waste your time in gathering professional engineers, be focus on the product</p>
+
+        <Button href="mailto:inbox@w7it.com">Assembly team for me</Button>
+    </div>
+</main>
 
 <style>
-    .p-home__title {
-        font-size: 2.3rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-    }
-
-    .p-home__nav {
-        margin: -1em 0 1em;
-    }
-
-    .p-home__intro {
-        width: 100%;
+    .intro {
+        background: linear-gradient(124.46deg, #430e56 20.18%, #17372a 98.76%);
+        color: #fff;
+        padding: 64px;
+        min-height: 60vh;
         display: grid;
-        gap: 1.5rem;
-        margin: 2rem 0;
-
-        grid-template-columns: auto;
-        grid-template-areas: 'photo' 'body';
+        align-items: center;
+        grid-template-columns: repeat(12, [col-start] 64px);
+        gap: 24px;
+        justify-content: center;
     }
 
-    img.p-home__photo {
-        display: block;
-        border-radius: var(--img-radius);
-        margin: 0 auto;
-        margin-top: 4px;
-        width: 100%;
+    .heroimg {
+        grid-column: col-start / span 6;
+        mix-blend-mode: luminosity;
     }
 
-    @media (min-width: 600px) {
-        .p-home__intro {
-            grid-template-columns: 250px auto;
-            grid-template-areas: 'photo body';
-        }
+    .herotxt {
+        grid-column: 7 col-start / span 6;
+    }
+
+    .herotxt h1 {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 1;
+        margin: 0 0 24px;
+    }
+
+    .herotxt p {
+        font-size: 24px;
+        margin: 0 0 32px;
     }
 </style>
