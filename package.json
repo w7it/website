@@ -22,6 +22,7 @@
         "@sveltejs/kit": "^1.0.1",
         "@typescript-eslint/eslint-plugin": "^5.47.0",
         "@typescript-eslint/parser": "^5.47.0",
+        "@w7it/prettier-config": "^0.1.0",
         "eslint": "^8.30.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
